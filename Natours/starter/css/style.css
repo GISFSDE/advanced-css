@@ -53,6 +53,7 @@ body {
     text-transform: uppercase;
     /* 解决动画抖动 */
     backface-visibility: hidden;
+
 }
 
 .text-box {
@@ -60,6 +61,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary-main {
@@ -70,6 +72,7 @@ body {
     animation: moveLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+
 }
 
 .heading-primary-sub {
@@ -78,6 +81,7 @@ body {
     display: block;
     letter-spacing: 17.4px;
     animation: moveRight 1s ease-out;
+    margin-bottom: 20px;
 }
 
 @keyframes moveLeft {
@@ -110,4 +114,32 @@ body {
         opacity: 1;
         transform: translateX(0%);
     }
+
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    /* 加之后从内联元素变为内联块元素 
+    既能够设置宽高，又不独自占据一行*/
+    display: inline-block;
+    transition: all .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.btn-write {
+    background-color: #fff;
+    color: #777;
+    border-radius: 200px;
 }
