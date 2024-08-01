@@ -37,7 +37,7 @@ body {
     position: relative;
 }
 
-.logo_box {
+.logo-box {
     /* https: //blog.csdn.net/yellow_important/article/details/140567591 子绝父相 */
     position: absolute;
     top: 30px;
@@ -46,4 +46,68 @@ body {
 
 .logo {
     height: 35px;
+}
+
+.heading-primary {
+    color: aliceblue;
+    text-transform: uppercase;
+    /* 解决动画抖动 */
+    backface-visibility: hidden;
+}
+
+.text-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary-main {
+    font-size: 60px;
+    display: block;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation: moveLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.heading-primary-sub {
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    letter-spacing: 17.4px;
+    animation: moveRight 1s ease-out;
+}
+
+@keyframes moveLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
